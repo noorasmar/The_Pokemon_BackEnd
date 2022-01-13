@@ -1,0 +1,39 @@
+/* Extra Small */
+@media (max-width: 767px) {
+    .about-us {
+        text-align: center;
+    }
+    .popup .inner{
+        width: 95%;
+    }
+    .popup .inner ul{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .list-box .list-data .alert h3{
+        font-size: 2rem;
+    }
+    footer .container{
+        justify-content: center;
+    }
+    .up{
+        display: none;
+    }
+
+}
+
+/* Small */
+@media (min-width: 768px) {
+}
+
+/* Medeium */
+@media (max-width: 991px) {
+}
+
+/* Large */
+@media (min-width: 929px) {
+}
+
+/* Extra Large */
+@media (min-width: 1200px) {
+}
