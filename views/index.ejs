@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeDex Landing Page</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <!-- My Css Style -->
+    <link rel="stylesheet" href="css/mystyle.css">
+    <!-- Rsponsive Css Style -->
+    <link rel="stylesheet" href="css/mymedia.css">
+    <!-- Pokemon Icon -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+<body>
+
+    <!-- Start Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo">
+                        <img src="images/logo.png" alt="">
+                    </a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#list-pokemon">List Pokemon</a></li>
+                        <li><a href="#list-captured">List Captured</a></li>
+                        <li><a href="#achivement">Achivement</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#list-pokemon">List Pokemon</a></li>
+                <li><a href="#list-captured">List Captured</a></li>
+                <li><a href="#achivement">Achivement</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Slider -->
+    <div class="slider">
+        <div class="carousel carousel-slider center">
+            <div class="carousel-item" href="#one!" style="background-image: url('images/sl-1.jpg');"></div>
+            <div class="carousel-item" href="#two!" style="background-image: url('images/sl-2.jpg');"></div>
+            <div class="carousel-item" href="#three!" style="background-image: url('images/bg.jpg');"></div>
+        </div>
+    </div>
+    <!-- End Slider -->
+
+    <!-- Start About Us -->
+    <div class="about-us" id="about-us">
+        <div class="container">
+            <div class="title">
+                <h2>
+                    About Us 
+                
+                </h2>
+            </div>
+            <div class="row">
+                <div class="col s12 m4 l6">
+                    <div class="image">
+                        <img class="responsive-img" src="images/pr.png" alt="">
+                    </div>
+                </div>
+                <div class="info col s12 m8 l6">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam perspiciatis, quam autem
+                        laudantium distinctio mollitia dolorem. Nihil minus voluptates repudiandae! Rem accusamus
+                        pariatur, similique enim nulla voluptatibus iste tenetur quis.
+                    </p>
+                    <p>
+                        Quam autem laudantium distinctio mollitia dolorem. Nihil minus voluptates repudiandae! Rem
+                        accusamus pariatur, similique enim nulla voluptatibus iste tenetur quis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <!-- End About Us -->
+
+    <!-- Start List Box -->
+    <div class="list-box" id="list-pokemon">
+        <div class="container">
+            <div class="title">
+                <h2>
+                    List Pokémon Pokédex
+                </h2>
+            </div>
+            <div class="search-box">
+                <div class="row">
+                    <div class="input-field col s12 m12 l6">
+                        <input type="text" name="search" id="search" placeholder="Enter The Pokemon Name">
+                    </div>
+                    <div class="input-field col s12 m6 l4">
+                        <button class="btn waves-effect btn-search" type="submit" name="action"
+                            onclick="searchPokemon()">
+                            <i class="material-icons center">search</i>
+                        </button>
+                    </div>
+                    <div class="input-field col s12 m6 l2">
+                        <a class="btn-reset" onclick="restoreData()">
+                            Restore Data
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="list-data">
+                <div class="error-search">
+                    <div class="alert">
+                        <h3>
+                            Oops !! Not Found
+                        </h3>
+                        <p>
+                            you insert the wrong name of pokemon.
+                        </p>
+                    </div>
+                </div>
+                <div class="row row-data">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End List Box -->
+
+    <!-- Start List Captured -->
+    <div class="list-captured" id="list-captured">
+        <div class="container">
+            <div class="title">
+                <h2>
+                    List Pokémon Captured
+                </h2>
+            </div>
+            <div class="row row-captured">
+
+            </div>
+        </div>
+    </div>
+    <!-- End List Captured -->
+
+    <!-- Start Our Achivement -->
+    <div class="our-achivement" id="achivement">
+        <div class="container">
+            <div class="title">
+                <h2>
+                    Our Achivement
+                </h2>
+            </div>
+            <div class="row">
+                <div class="col s12 m6 l3">
+                    <div class="item">
+                        <span class="count" data-from="0" data-to="1118"  data-speed="2000" data-refresh-interval="50">
+
+                        </span>
+                        <span>
+                            Num Pokemon
+                        </span>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="item">
+                        <span class="count" data-from="0" data-to="5000" data-speed="2000" data-refresh-interval="50">
+
+                        </span>
+                        <span>
+                            Enrolled
+                        </span>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="item">
+                        <span class="count" data-from="0" data-to="50000"  data-speed="2000" data-refresh-interval="50">
+
+                        </span>
+                        <span>
+                            Earn Money
+                        </span>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="item">
+                        <span class="count" data-from="0" data-to="100"  data-speed="2000" data-refresh-interval="50">
+
+                        </span>
+                        <span>
+                            Satisfaction Rate
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- End Our Achivement -->
+
+    <!-- Start Footer -->
+    <footer>
+        <div class="container">
+            <div class="social">
+                <a href="#" title="Facebook">
+                    <img src="images/iconfinder_Facebook_1288098-min.png" alt="">
+                </a>
+                <a href="#" title="Instagram">
+                    <img src="images/iconfinder_Instagram_1288103-min.png" alt="">
+                </a>
+                <a href="#" title="Youtube">
+                    <img src="images/iconfinder_Youtube_1288115-min.png" alt="">
+                </a>
+            </div>
+            <div class="copy-right">
+                &copy; All Right Reserve For Noor Asmar
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Scroll To Top -->
+    <div class="up">
+        <i class="material-icons">expand_less</i>
+    </div>
+    <!-- Scroll To Top -->
+
+    <!-- Start Loading -->
+    <!-- <div class="load-overlay">
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+        </div>
+    </div> -->
+    <!-- End Loading -->
+
+
+
+
+    <!-- Script -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.countTo.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/myscript.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>
